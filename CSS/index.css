@@ -1,0 +1,33 @@
+.main{
+	margin-top: 30px;
+}
+.carousel{
+	border: 2px solid black;
+}
+.welcome{
+	background-color: #CC7A2E;
+	border: 3px solid black;
+	margin-top: 10px;
+}
+.footer{
+	background-color: #1f1f21;
+	border: 3px solid black;
+	height: 25vh;
+}
+.footer p{
+	color: white;
+	text-align: center;
+	margin-top: auto;
+}
+@media screen and (min-width: 900px){
+	.main{
+		margin-top: 0px;
+		margin: 60px;
+	}
+	.welcome{
+		overflow: hidden;
+	}
+	.footer{
+		height: 10vh;
+	}
+}

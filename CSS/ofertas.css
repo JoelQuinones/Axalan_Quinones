@@ -1,0 +1,55 @@
+.descuentos{
+	display: flex;
+	flex-direction: column;
+	border-top: 3px solid black;
+	border-right: 3px solid black;
+	border-bottom: 3px solid black;
+}
+h2{
+	text-align: center;
+	color: white;
+}
+h4{
+	color: white;
+}
+.descuentos__titulos{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #1f1f21;
+	border-bottom: 3px solid black;
+}
+.descuentos__div{
+	flex-grow: 3;
+	border-left: 3px solid black;
+}
+.descuentos__productos{
+	display: flex;
+	justify-content: space-around;
+	background-color: #CC7A2E;
+}
+.descuentos__productos p{
+	font-size: 20px;
+}
+@media screen and (min-width: 900px){
+	.descuentos{
+		flex-direction: row;
+		justify-content: flex-start;
+		margin: 10px;
+		border-bottom: 0;
+	}
+	h2{
+		text-align: left;
+	}
+	.descuentos__titulos{
+		flex-direction: column;
+		border-bottom: 0;
+	}
+	.descuentos__productos{
+		flex-direction: column;
+		width:  100vw;
+	}
+	.descuentos__div{
+		border-bottom: 3px solid black;
+	}
+}
