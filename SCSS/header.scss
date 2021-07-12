@@ -1,0 +1,91 @@
+@import "vars";
+@import "fonts";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: rgba(158,31,0,1);
+}
+.header{
+	background-color: $fondo__titulos;
+	.header__beginning{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		img{
+			width: 150px;
+			opacity: 1;
+		}
+		h1{
+			color: white;
+			align-self: center;
+		}
+	}
+	.nav{
+		background-color: $fondo__titulos;
+		.bg-light{
+			position: sticky;
+		}
+		.nav-link{
+			color: white!important;
+		}
+		.dropdown-menu{
+			background-color: $fondo__titulos;
+			.dropdown-item{
+				color: white;
+			}
+		}
+	}
+}
+.inicio{
+	display: flex;
+	position: fixed;
+	top: 60px;
+	left: 300px;
+	transition: 1s;
+	.iniciaSeasion{
+		background-color: $fondo__normal;
+		height: 10vh;
+	}	
+	.inicio__form{
+		background-color: $fondo__normal;
+		border: $border;
+	}
+	.formulario{
+		margin: 50px;
+	}
+	.btn-primary{
+		background-color: $fondo__titulos;
+		border: $border;
+	}
+
+}
+.inicio:hover{
+	transform: translate(-150px);
+}
+@media screen and (min-width: 900px){
+	.header{
+		top: 0;
+		width: 100vw;
+		.header__beginning{
+			justify-content: center;
+		}
+	}
+	.bg-light{
+		position: inherit;
+	}
+	.inicio{
+		left: 81.5em;
+	}
+}
+
+$bordes: (bt: top, bl: left, br: right, bb: bottom);
+
+@each $border, $direction in $bordes{
+	.#{$border}{
+		border-#{$direction}: 3px solid black;
+	}
+}
