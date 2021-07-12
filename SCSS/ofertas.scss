@@ -1,0 +1,59 @@
+@import "vars";
+@import "fonts";
+
+.descuentos{
+	display: flex;
+	flex-direction: column;
+	.descuentos__titulos{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color: $fondo__titulos;
+		border-bottom: $border;
+		.descuentos__div{
+			flex-grow: 3;
+			border-left: $border;
+		}
+	}
+	.descuentos__productos{
+		display: flex;
+		justify-content: space-around;
+		background-color: $fondo__normal;
+		.descuentos__div{
+			flex-grow: 3;
+			border-left: $border;
+		}
+		p{
+			font-size: 20px;
+		}
+	}
+}
+h2{
+	text-align: center;
+	color: white;
+}
+h4{
+	color: white;
+}
+@media screen and (min-width: 900px){
+	.descuentos{
+		flex-direction: row;
+		justify-content: flex-start;
+		margin: 10px;
+		border-bottom: 0;
+	}
+	h2{
+		text-align: left;
+	}
+	.descuentos__titulos{
+		flex-direction: column;
+		border-bottom: 0;
+	}
+	.descuentos__productos{
+		flex-direction: column;
+		width:  100vw;
+	}
+	.descuentos__div{
+		border-bottom: $border;
+	}
+}

@@ -1,0 +1,64 @@
+@import "vars";
+@import "fonts";
+
+@mixin flex($flex, $direction, $justify){
+	display: $flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+}
+.titulo1{
+	background-color: $fondo__titulos;
+	margin-top: 30px;
+	border: $border;
+	h2{
+		color: white;
+		text-align: center;
+		margin-top: 0px;
+	}
+	.lista{
+		@include flex(flex, column, flex-star);
+		.lista__titulos{
+			@include flex(flex, row, space-around);
+			color: white;
+		}
+	}
+	.lista__pyp{
+		background-color: #CC7A2E;
+		.lista__productos{
+			@include flex(flex, row, space-around);
+			width: 100vw;
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+			.ul{
+				border-right: 3px solid black;
+			}
+		}
+	}
+	li{
+		list-style: none;
+	}
+	.input{
+		width: 3em;
+	}
+	.total{
+		@include flex(flex, row, space-around);
+	}
+	.enviar{
+		@extend .total;
+	}
+}
+@media screen and (min-width: 900px){
+	main{
+		margin: 100px
+	}
+	.titulo{
+		margin: 50px;
+		.lista__pyp{
+			.lista__productos{
+				width: 85vw;
+			}
+		}
+	}
+}
